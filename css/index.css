@@ -1,0 +1,161 @@
+/* +++++++++++++++++++++++++++++++++++++++ FORMATO BASICO INICIO +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo del banner */
+  .banner {
+    background-image: url('banner.jpg'); /* Reemplaza con tu imagen de banner */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex; /* Para alinear el logo y el texto en línea */
+    align-items: center; /* Centrar verticalmente el contenido */
+}
+
+.logo {
+    text-decoration: none; /* Sin subrayado */
+    color: black; /* Color del texto */
+}
+
+.logo-image {
+    height: 50px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espaciado entre el logo y el texto */
+}
+
+.logo-text {
+    font-size: 24px; /* Tamaño de la letra */
+    font-weight: bold; /* Estilo de la letra */
+}
+
+  /* Barra de navegación */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 1em;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo img {
+    margin-right: 10px;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar .nav-links a:hover,
+  .navbar .nav-links a.active {
+    color: #ddd;
+  }
+
+/********************************************** BOTON LOGIN Y CARRITO **********************************************/
+.highlight {
+  background-color: #e27f86; /* Fondo negro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 7px; /* Espaciado interno */
+}
+
+.highlight a {
+  color: #ffffff;; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px; /* Espaciado interno del enlace */
+}
+
+.highlight a:hover {
+  opacity: 0.8; /* Efecto al pasar el mouse */
+  color: white; /* Mantener texto blanco al pasar el mouse */
+}
+
+/* Estilos para el contenedor del carrito */
+.cart-container {
+  position: relative; /* Para posicionar el contador sobre el ícono */
+}
+
+.cart-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  display: block;
+}
+
+  /************************************************ FOOTER *********************************************************/
+  .footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 45%;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+}
+
+.location-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.location-link:hover {
+    color: #e27f86; /* Cambia a tu color preferido al pasar el mouse */
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+  
+  /* +++++++++++++++++++++++++++++++++++++++ FORMATO BASICO INICIO +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Estilo para el botón activo */
+button {
+  background-color: #962d2d;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #7d1515;
+}
