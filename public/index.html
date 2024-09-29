@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Regalito</title>
+  <link rel="stylesheet" href="css/index.css"> <!-- Enlace a la hoja de estilos -->
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="logo">
+          <img src="/img/icono.png" alt="Logo" class="logo-image"> <!-- Cambia el src a la ruta de tu logo -->
+          <span class="logo-text">El Regalito</span> <!-- Cambia este texto al nombre de tu negocio -->
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-button">Productos</a></li>
+      <li><a href="#" class="nav-button">Categorías</a></li>
+      <!-- Aquí añadimos el user-section para el botón o imagen de perfil -->
+      <li id="user-section"></li>
+      
+      <!-- Carrito de Compras con ícono -->
+      <li class="carrito-container">
+        <a href="/html/carrito.html" class="cart-link">
+          <img src="/img/carrito de compras.png" alt="Carrito de Compras" class="cart-icon" width="32">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Banner al inicio -->
+  <section class="banner">
+      <div class="banner-content">
+        <h1>¡Bienvenidos a la Miscelánea!</h1>
+        <p>Encuentra los mejores productos y ofertas</p>
+        <a href="#ofertas" class="banner-button">Ver Ofertas</a>
+      </div>
+  </section>
+      
+  <!-- Contenido principal -->
+  <main class="main-container">
+    <div class="left-side">
+      <h1>Miscelánea</h1>
+      <p>El mejor lugar para encontrar lo que necesitas</p>
+    </div>
+    <div class="right-side">
+      <!-- Aquí se mostrarán los productos, categorías y carrito -->
+      <h2 id="ofertas">Productos destacados</h2>
+      <div class="products" id="productos-activos"> <!-- Contenedor dinámico para los productos -->
+        <p>Cargando productos...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Sección Sobre Nosotros -->
+      <div class="footer-section">
+        <h4>Sobre Nosotros</h4>
+        <p>Somos una miscelánea comprometida con ofrecer productos de calidad a precios accesibles.</p>
+        <p>Teléfono: +502 51237842</p>
+
+        <!-- Contenedor para Ubicación con Google Maps -->
+        <div class="location-container">
+          <a href="https://www.google.com/maps/place/Mercado+Santa+Cruz,+Mezquital+Villa+Nueva/@14.5535468,-90.5648578,15z/data=!4m6!3m5!1s0x8589a727c0000001:0x10e2a757d022384!8m2!3d14.5535468!4d-90.5648578!16s%2Fg%2F11c1p2rrrh?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D" class="location-link" target="_blank">
+            <img src="/img/google maps.png" alt="Ubicación" width="24" style="vertical-align: middle; margin-right: 8px;">
+            <span>Zona 12 Villa Nueva Mezquital Mercado "Santa Cruz" local 2</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sección de Redes Sociales -->
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#"><img src="/img/facebook.png" alt="Facebook" width="24"></a>
+          <a href="#"><img src="/img/instagram.png" alt="Instagram" width="24"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Archivo JavaScript para cargar productos activos -->
+  <script src="/js/apiProductosActivos.js"></script>
+  <script src="/js/cambioBotonPerfil.js"></script>
+</body>
+</html>
