@@ -15,7 +15,7 @@ function mostrarConfirmacion() {
     const modal = document.getElementById('confirmacionCompra');
     modal.style.animation = 'fadeOut 0.5s ease'; // Agregar animación de salida
     setTimeout(function() {
-      window.location.href = '/html/entregas.html'; // Redirige a la página de entrega
+      window.location.href = '../html/entregas.html'; // Redirige a la página de entrega
     }, 500); // Espera el tiempo de la animación antes de redirigir
   }
   

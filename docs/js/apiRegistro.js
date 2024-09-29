@@ -35,7 +35,7 @@ async function registerUser() {
         // Mostrar mensaje de éxito
         showModal('Registro exitoso. ¡Bienvenido!');
         setTimeout(() => {
-          window.location.href = '/html/login.html'; // Redirigir al login
+          window.location.href = '../html/login.html'; // Redirigir al login
         }, 3000);
       } else {
         // Mostrar mensaje de error si la solicitud no fue exitosa

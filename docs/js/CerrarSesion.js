@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.removeItem('token');
       
       // Redirigir al usuario a la página de inicio o de login
-      window.location.href = '/html/login.html';
+      window.location.href = '../index.html';
     });
   });
   

@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
               console.log('Rol guardado:', result.rol);
   
               // Redirigir al index
-              window.location.href = '/index.html';
+              window.location.href = '../index.html';
             } else {
               console.error('No se encontró el token o rol en la respuesta.');
               if (loginError) {
