@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Regalito</title>
   <link rel="stylesheet" href="./css/barraNavegacionFooter.css"> <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
@@ -48,7 +49,18 @@
     <div class="right-side">
       <h2 id="ofertas">Productos destacados</h2>
       <div class="products" id="productos-activos"> <!-- Contenedor dinámico para productos -->
-        <p>Cargando productos...</p>
+        <div id="modal" class="modal">
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img id="modal-image" src="" alt="Producto">
+              <h2 id="modal-title"></h2>
+              <p id="modal-description"></p>
+              <p id="modal-price"></p>
+              <button id="comprar-btn">Comprar</button>
+            </div>
+          </div>          
+        </div>
       </div>
     </div>
   </main>

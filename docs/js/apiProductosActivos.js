@@ -18,19 +18,11 @@ async function cargarProductosActivos() {
         productos.forEach(producto => {
             // Creamos un elemento para cada producto utilizando los campos que muestra la API
             const productoHTML = `
-                <div class="producto">
+                <div class="producto" onclick="mostrarModal('${producto.imagen}', '${producto.nombre}', '${producto.descripcion}', ${producto.precio_final})">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
                     <h2>${producto.nombre}</h2>
-                    <p><strong>ID Producto:</strong> ${producto.id_producto}</p>
-                    <p><strong>ID Proveedor:</strong> ${producto.id_proveedor}</p>
-                    <p><strong>Categoría:</strong> ${producto.id_categoria}</p>
-                    <p><strong>Código de Barras:</strong> ${producto.codigo_barra}</p>
-                    <p class="precio"><strong>Precio Base:</strong> $${producto.precio_base}</p>
-                    <p class="precio"><strong>Precio Final:</strong> $${producto.precio_final}</p>
-                    <p>${producto.descripcion}</p>
-                    <img src="${producto.imagen}" alt="${producto.nombre}" width="100">
-                    <p><strong>Fecha de Creación:</strong> ${new Date(producto.fecha_creacion).toLocaleDateString()}</p>
-                    <p><strong>Estado:</strong> ${producto.estado}</p>
-                    <button class="agregar-carrito">Añadir al Carrito</button>
+                    <p class="descripcion">${producto.descripcion}</p>
+                    <p class="precio">Q${producto.precio_final}</p>
                 </div>
             `;
 
@@ -42,6 +34,28 @@ async function cargarProductosActivos() {
     }
 }
 
+// Función para mostrar el modal con la información del producto
+function mostrarModal(imagen, nombre, descripcion, precio) {
+    const modal = document.getElementById('modal');
+    document.getElementById('modal-image').src = imagen;
+    document.getElementById('modal-title').textContent = nombre;
+    document.getElementById('modal-description').textContent = descripcion;
+    document.getElementById('modal-price').textContent = `Precio: Q${precio}`;
+    modal.style.display = "block";
+}
+
+// Función para cerrar el modal
+document.querySelector('.modal .close').onclick = function() {
+    document.getElementById('modal').style.display = "none";
+};
+
+// Cierra el modal cuando se hace clic fuera de él
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
 // Llamamos a la función para cargar los productos activos cuando se cargue la página
 cargarProductosActivos();
-

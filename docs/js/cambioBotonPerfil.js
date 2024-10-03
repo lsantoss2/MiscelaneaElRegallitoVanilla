@@ -7,16 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (userSection) {
     if (rol) {
-      console.log('Mostrando imagen de perfil');
+      console.log('Mostrando texto de perfil');
       userSection.innerHTML = `
-        <a href="${basePath}html/perfil.html">
-          <img src="${basePath}img/profile.png" alt="Perfil" style="width: 50px; height: 50px; border-radius: 50%;">
-        </a>
+        <a href="${basePath}html/perfil.html" class="nav-link">Perfil</a>
       `;
     } else {
-      console.log('Mostrando botón de iniciar sesión');
+      console.log('Mostrando enlace de iniciar sesión');
       userSection.innerHTML = `
-        <a href="${basePath}html/login.html" id="login-button" class="nav-button highlight">Iniciar Sesión</a>
+        <a href="${basePath}html/login.html" id="login-link" class="nav-link">Iniciar Sesión</a>
       `;
     }
   } else {

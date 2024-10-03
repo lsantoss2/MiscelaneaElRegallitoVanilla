@@ -8,20 +8,28 @@
 </head>
 <body>
 
-  <!-- Barra de navegación simple -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <a href="../index.html" class="logo">
-        <img src="../img/icono.png" alt="Logo" class="logo-image">
-        <span class="logo-text">El Regalito</span>
+ <!-- Barra de navegación BOTON PERFIL -->
+ <nav class="navbar">
+  <div class="logo-container">
+    <a href="../index.html" class="logo">
+        <img src="../img/icono.png" alt="Logo" class="logo-image"> <!-- Cambia el src a la ruta de tu logo -->
+        <span class="logo-text">El Regalito</span> <!-- Cambia este texto al nombre de tu negocio -->
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-button">Productos</a></li>
+    <li><a href="#" class="nav-button">Categorías</a></li>
+    <!-- Aquí añadimos el user-section para el botón o imagen de perfil -->
+    <li id="user-section"></li>
+    
+    <!-- Carrito de Compras con ícono -->
+    <li class="carrito-container">
+      <a href="../html/carrito.html" class="cart-link">
+        <img src="../img/carrito de compras.png" alt="Carrito de Compras" class="cart-icon" width="32">
       </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="../html/productos.html">Productos</a></li>
-      <li><a href="../html/categorias.html">Categorías</a></li>
-    </ul>
-  </nav>
+    </li>
+  </ul>
+</nav>
 
   <!-- Contenido de la página de perfil -->
   <main class="profile-container">
