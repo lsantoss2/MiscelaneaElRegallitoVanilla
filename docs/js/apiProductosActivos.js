@@ -18,7 +18,7 @@ async function cargarProductosActivos() {
         productos.forEach(producto => {
             // Creamos un elemento para cada producto utilizando los campos que muestra la API
             const productoHTML = `
-                <div class="producto" onclick="mostrarModal('${producto.imagen}', '${producto.nombre}', '${producto.descripcion}', ${producto.precio_final})">
+                <div class="producto" onclick="verDetalles(${producto.id_producto})">
                     <img src="${producto.imagen}" alt="${producto.nombre}">
                     <h2>${producto.nombre}</h2>
                     <p class="descripcion">${producto.descripcion}</p>
@@ -34,28 +34,13 @@ async function cargarProductosActivos() {
     }
 }
 
-// Función para mostrar el modal con la información del producto
-function mostrarModal(imagen, nombre, descripcion, precio) {
-    const modal = document.getElementById('modal');
-    document.getElementById('modal-image').src = imagen;
-    document.getElementById('modal-title').textContent = nombre;
-    document.getElementById('modal-description').textContent = descripcion;
-    document.getElementById('modal-price').textContent = `Precio: Q${precio}`;
-    modal.style.display = "block";
+function verDetalles(producto) {
+    // Guardamos el ID del producto en localStorage
+    localStorage.setItem('selectedProduct', producto.id_producto);
+    // Redirigimos a la página de detalles del producto
+    window.location.href = './html/detalles-producto.html';
 }
 
-// Función para cerrar el modal
-document.querySelector('.modal .close').onclick = function() {
-    document.getElementById('modal').style.display = "none";
-};
-
-// Cierra el modal cuando se hace clic fuera de él
-window.onclick = function(event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
 
 // Llamamos a la función para cargar los productos activos cuando se cargue la página
 cargarProductosActivos();

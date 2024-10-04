@@ -8,7 +8,7 @@ async function registerUser() {
   
     // Estado y rol por defecto
     const estado = 0;
-    const id_rol = 2;
+    const id_rol = 1;
   
     try {
       // Hacer la solicitud POST a la API de registro
