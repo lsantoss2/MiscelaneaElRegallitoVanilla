@@ -34,13 +34,14 @@ async function cargarProductosActivos() {
     }
 }
 
-function verDetalles(producto) {
+// Función para ver los detalles del producto
+function verDetalles(idProducto) {
     // Guardamos el ID del producto en localStorage
-    localStorage.setItem('selectedProduct', producto.id_producto);
+    localStorage.setItem('selectedProduct', idProducto);
     // Redirigimos a la página de detalles del producto
     window.location.href = './html/detalles-producto.html';
 }
 
-
 // Llamamos a la función para cargar los productos activos cuando se cargue la página
 cargarProductosActivos();
+ 
